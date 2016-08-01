@@ -1,6 +1,6 @@
 // Draw everything
 
-var render = function () {
+var view = function () {
 
 	// draw background
 	if (bgReady) {
@@ -61,4 +61,37 @@ var render = function () {
 	  ctx.textBaseline = "top";
 	  ctx.fillText("0"+minute+":0"+second, game.width/2+grid, grid);
 	}
+};
+
+// draw before the game started
+var gamestart = function () {
+	ctx.fillStyle = '#000000';
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+	ctx.fillStyle = '#ff0000';
+	ctx.font = "50px Bangers, Impact, Arial";
+	ctx.textAlign = "center";
+	ctx.textBaseline = "top";
+	ctx.fillText("鬼抓人", game.width / 2, grid*3);
+
+	ctx.fillStyle = '#ffffff';
+	ctx.font = '20px Arial';
+	ctx.textAlign = "center";
+	ctx.textBaseline = "top";
+	ctx.fillText("填完資料後按Enter開始", game.width / 2, game.height / 2 + grid*2);
+}
+
+// draw gameover
+var gameover = function () {
+	ctx.fillStyle = '#ff0000';
+	ctx.font = "50px Bangers, Impact, Arial";
+	ctx.textAlign = "center";
+	ctx.textBaseline = "top";
+	ctx.fillText(whowin+" Win!", game.width / 2, game.height / 2 - grid);
+
+	ctx.fillStyle = '#ffffff';
+	ctx.font = '20px Arial';
+	ctx.textAlign = "center";
+	ctx.textBaseline = "top";
+	ctx.fillText("press RETURN to try again", game.width / 2, game.height / 2 + grid);
 };

@@ -8,6 +8,7 @@ var touch = function () {
 		}
 	}
 
+	// catch
   if (isTouching(ghost,player1) && ghost!=player1) {
     whowin='Ghost';
   }

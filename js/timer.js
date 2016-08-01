@@ -1,7 +1,7 @@
 //timing
 var minute=1;
 var second=0;
-var fiveminute = function () {
+var timer = function () {
 	if (second===0 && minute!==0) {
 		minute-=1;
 		second=60;
