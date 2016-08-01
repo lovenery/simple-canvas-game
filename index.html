@@ -3,13 +3,36 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Game</title>
+		<style media="screen">
+			#input1 {
+				position: fixed;
+				left: 160px;
+				top: 200px;
+			}
+			#input2 {
+				position: fixed;
+				left: 160px;
+				top: 230px;
+			}
+			#input3 {
+				position: fixed;
+				left: 160px;
+				top: 260px;
+			}
+		</style>
 	</head>
 	<body>
-		<div id="gamecanvas" tabindex="0">
+		<div>
+				<div id="gamecanvas" tabindex="0">
+		    <input type="text" id="input1" placeholder="player1'name"></input>
+				<input type="text" id="input2" placeholder="player2'name"></input>
+				<input type="text" id="input3" placeholder="player3'name"></input>
+		</div>
 		<script src="js/img.js"></script>
-		<script src="js/modal.js"></script>
+		<script src="js/model.js"></script>
 		<script src="js/controller.js"></script>
 		<script src="js/touch.js"></script>
+		<script src="js/timer.js"></script>
 		<script src="js/view.js"></script>
 		<script src="js/main.js"></script>
 	</body>

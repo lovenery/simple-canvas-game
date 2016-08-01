@@ -35,3 +35,11 @@ ghostImage.onload = function () {
 	ghostReady = true;
 };
 ghostImage.src = "img/monster.png";
+
+// save area image
+var save_areaReady = false;
+var save_areaImage = new Image();
+save_areaImage.onload = function () {
+	save_areaReady = true;
+};
+save_areaImage.src = "img/block.png";

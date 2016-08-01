@@ -33,29 +33,47 @@ var control = function (modifier) {
 		}
 	}
 
+	// player2
 	if (87 in keysDown) { // Player2 holding up
-		player2.y -= player2.speed * modifier;
+		if (player2.y >= 0) {
+			player2.y -= player2.speed * modifier;
+		}
 	}
 	if (83 in keysDown) { // Player2 holding down
-		player2.y += player2.speed * modifier;
+		if (player2.y <= game.height - grid) {
+			player2.y += player2.speed * modifier;
+		}
 	}
 	if (65 in keysDown) { // Player2 holding left
-		player2.x -= player2.speed * modifier;
+		if (player2.x >= 0) {
+			player2.x -= player2.speed * modifier;
+		}
 	}
 	if (68 in keysDown) { // Player2 holding right
-		player2.x += player2.speed * modifier;
+		if (player2.x <= game.width - grid) {
+			player2.x += player2.speed * modifier;
+		}
 	}
 
+	// player3
 	if (85 in keysDown) { // Player3 holding up
-		player3.y -= player3.speed * modifier;
+		if (player3.y >= 0) {
+			player3.y -= player3.speed * modifier;
+		}
 	}
 	if (74 in keysDown) { // Player3 holding down
-		player3.y += player3.speed * modifier;
+		if (player3.y <= game.height - grid) {
+			player3.y += player3.speed * modifier;
+		}
 	}
 	if (72 in keysDown) { // Player3 holding left
-		player3.x -= player3.speed * modifier;
+		if (player3.x >= 0) {
+			player3.x -= player3.speed * modifier;
+		}
 	}
 	if (75 in keysDown) { // Player3 holding right
-		player3.x += player3.speed * modifier;
+		if (player3.x <= game.width - grid) {
+			player3.x += player3.speed * modifier;
+		}
 	}
 };
