@@ -79,7 +79,7 @@ var gamestart = function () {
 	ctx.textAlign = "center";
 	ctx.textBaseline = "top";
 	ctx.fillText("填完資料後按Enter開始", game.width / 2, game.height / 2 + grid*2);
-}
+};
 
 // draw gameover
 var gameover = function () {

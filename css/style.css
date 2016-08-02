@@ -1,0 +1,44 @@
+/* INPUT */
+#input1 {
+  position: fixed;
+  left: 43%;
+  top: 200px;
+}
+#input2 {
+  position: fixed;
+  left: 43%;
+  top: 230px;
+}
+#input3 {
+  position: fixed;
+  left: 43%;
+  top: 260px;
+}
+
+/* CANVAS */
+#gamecanvas {
+    margin: 0 auto;
+    width: 512px;
+}
+canvas {
+    border:5px solid black;
+}
+
+/* BTN */
+.btn {
+  border-radius: 0.5em;
+  background-color: #111111;
+  color: #fff;
+
+  display: inline-block;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+#restart {
+    position: absolute;
+    left: 30%;
+}
+#refresh {
+    position: absolute;
+    left: 36%;
+}

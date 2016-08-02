@@ -3,31 +3,18 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Game</title>
-		<style media="screen">
-			#input1 {
-				position: fixed;
-				left: 160px;
-				top: 200px;
-			}
-			#input2 {
-				position: fixed;
-				left: 160px;
-				top: 230px;
-			}
-			#input3 {
-				position: fixed;
-				left: 160px;
-				top: 260px;
-			}
-		</style>
+		<link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
 	</head>
 	<body>
 		<div>
-	    <input type="text" id="input1" placeholder="player1'name"></input>
-			<input type="text" id="input2" placeholder="player2'name"></input>
-			<input type="text" id="input3" placeholder="player3'name"></input>
-			<div id="gamecanvas" tabindex="0">
+	    <input type="text" id="input1" placeholder="player1's name"></input>
+			<input type="text" id="input2" placeholder="player2's name"></input>
+			<input type="text" id="input3" placeholder="player3's name"></input>
+			<div id="gamecanvas"></div>
+			<button class="btn" id="restart" onclick="restart();">換人當鬼</button>
+			<button class="btn" id="refresh" onclick="location.reload();">重新開始</button>
 		</div>
+
 		<script src="js/img.js"></script>
 		<script src="js/model.js"></script>
 		<script src="js/controller.js"></script>
@@ -36,5 +23,14 @@
 		<script src="js/view.js"></script>
 		<script src="js/init.js"></script>
 		<script src="js/main.js"></script>
+		<script type="text/javascript">
+			function restart() {
+				ready_start=false;
+				init();
+				main();
+				clearInterval(start_timer);
+				start_timer = setInterval(timer,1000);
+			}
+		</script>
 	</body>
 </html>
